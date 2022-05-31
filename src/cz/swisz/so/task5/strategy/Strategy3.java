@@ -27,8 +27,8 @@ public class Strategy3 extends DistributionSimulation {
                 CPU selected = allCpus.get(selectedId);
 
                 if (selected.getRealLoad() > _p) {
-                    ArrayList<Process> releasedTaks = selected.releaseTasks();
-                    for (Process p : releasedTaks) {
+                    ArrayList<Process> releasedTasks = selected.releaseTasks();
+                    for (Process p : releasedTasks) {
                         cpu.assignNewProcess(p);
                         incrementMigrations();
                     }

@@ -102,7 +102,7 @@ public class CPU {
     }
 
     public ArrayList<Process> releaseTasks() {
-        double targetLoad = _load * 2.0 / 3.0;
+        double targetLoad = _load * 3.0 / 4.0;
         ArrayList<Process> released = new ArrayList<>();
 
         ListIterator<Process> it = _runningTasks.listIterator();

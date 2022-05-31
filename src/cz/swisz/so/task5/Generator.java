@@ -9,9 +9,9 @@ public class Generator {
         Random random = new Random();
         for (int i = 0; i < count; i++) {
             int cpuId = random.nextInt(cpuCount);
-            double cpuLoad = random.nextDouble() * 0.25;
+            double cpuLoad = random.nextDouble() * 0.5;
             double appearTime = random.nextDouble() * count / 50.0;
-            double executionTime = random.nextDouble() * 20 + 0.5;
+            double executionTime = random.nextDouble() * 15 + 0.5;
 
             list.add(new Process(cpuId, cpuLoad, appearTime, executionTime));
         }

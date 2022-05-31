@@ -52,13 +52,13 @@ public class Main {
 
 
     public static void main(String[] args) {
-        final int N = 65;
+        final int N = 10;
         final double p = 0.7; // threshold
-        final double r = 0.5; // strat3 threshold
+        final double r = 0.4; // strat3 threshold
         final int z = 24; // retry count
 
         ArrayList<Process> generated = new ArrayList<>();
-        Generator.generateProcessList(generated, N, 1000);
+        Generator.generateProcessList(generated, N, 500);
 
         testStrategy("Strategia 1", new Strategy1(cloneList(generated), N, p, z));
         testStrategy("Strategia 2", new Strategy2(cloneList(generated), N, p, z));
